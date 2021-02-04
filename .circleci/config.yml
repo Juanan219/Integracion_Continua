@@ -1,24 +1,9 @@
 jobs:
   deploy:
     docker:
-      - image: debian
+      - image: cimg/base
     steps:
       - attach_workspace:
           at: InforBlog
-      - run: apt-get update
       - run: apt-get install hugo
-orbs:
-  hugo: circleci/hugo@0.2
-version: 2.1
-workflows:
-  main:
-    jobs:
-      - hugo/build:
-          html-proofer: true
-          version: '0.55'
-      - deploy:
-          filters:
-            branches:
-              only: main
-          requires:
-            - hugo/build
+      - run: hugo server
