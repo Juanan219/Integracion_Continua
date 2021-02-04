@@ -1,0 +1,52 @@
+baseURL = "http://prueba.iesgn16.es"
+languageCode = "es-es"
+title = "Juanan"
+theme = "anubis"
+paginate = 3
+
+disqusShortname = ""
+googleAnalytics = ""
+
+[author]
+  name = "Juan Antonio Reifs Ramírez"
+
+[params]
+   author = "Juan Antonio Reifs Ramírez"
+   description = "Esto es una prueba."
+   dateFormat = "2006-01-02"
+   paginationSinglePost = true
+   style = "light-without-switcher"
+   readMore = false
+
+   # utteranc.es support
+   utterancesRepo = ""  # mandatory
+   utterancesTheme = "" # optional
+   utterancesIssue = "" # optional
+   utterancesLabel = "" # optional
+
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Archive"
+    identifier = "archive"
+    url = "/posts/"
+    weight = 3
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+[markup.goldmark.renderer]
+unsafe = true
