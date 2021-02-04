@@ -1,11 +1,3 @@
-jobs:
-  deploy:
-    docker:
-      - image: debian
-    steps:
-      - attach_workspace:
-          at: Inforblog 
-      - run: apt-get install hugo
 orbs:
   hugo: circleci/hugo@0.1
 version: 2.1
